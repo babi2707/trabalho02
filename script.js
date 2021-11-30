@@ -10,7 +10,7 @@ function loadProfile() {
     <div class="row" id="profile">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
     <img
-      class="card-img-top"
+      class="info-img"
       src="${data.avatar_url}"
       alt="Card image cap"
     />
@@ -19,7 +19,7 @@ function loadProfile() {
     <div class="infos">
       <h5 class="info-title">Profile: ${data.name}</h5>
       <p>Username: ${data.login} </p>
-      <p class="card-text">Bio:
+      <p class="info-text">Bio:
       ${data.bio}
       </p>
       <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
