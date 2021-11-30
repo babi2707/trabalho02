@@ -6,14 +6,18 @@ function loadProfile() {
 
     var data = JSON.parse(this.responseText);
 
-    let newProfile = `<div class="card" style="width: 18rem">
+    let newProfile = `<div class="container">
+    <div class="row" id="profile">
+    <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
     <img
       class="card-img-top"
       src="${data.avatar_url}"
       alt="Card image cap"
     />
-    <div class="card-body">
-      <h5 class="card-title">Profile: ${data.name}</h5>
+    </div>
+    <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
+    <div class="infos">
+      <h5 class="info-title">Profile: ${data.name}</h5>
       <p>Username: ${data.login} </p>
       <p class="card-text">Bio:
       ${data.bio}
@@ -23,10 +27,12 @@ function loadProfile() {
         href="${data.html_url}"
         >Github profile</a
       ></button>
+  </div>
     </div>
-  </div>`;
+    </div>
+    </div>`;
 
-  document.getElementById("tela").innerHTML = newProfile;
+    document.getElementById("tela").innerHTML = newProfile;
   };
 
   xhr.onerror = function () {
