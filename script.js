@@ -1,4 +1,5 @@
 function loadProfileInicial() {
+  //------------------------ perfil ------------------------
   let xhr = new XMLHttpRequest();
 
   xhr.onload = function () {
@@ -38,6 +39,46 @@ function loadProfileInicial() {
   };
   xhr.open("Get", "https://api.github.com/users/babi2707");
   xhr.send();
+
+  //--------------------------------------------------------
+
+  //---------------------- repositorio ----------------------
+
+  let xhr2 = new XMLHttpRequest();
+
+  xhr2.onload = function () {
+    var data2 = JSON.parse(this.responseText);
+
+    let Repository = ``;
+
+    for (let i = 0; i < data2.length; i++) {
+      let coloca = data2[i];
+      Repository += `<div class="container">
+        <div class="row">
+        <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Visibilidade:${coloca.visibility} </p>
+        <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.url}"
+        >Link</a
+      ></button>
+        </div>
+        </div>
+        </div>`;
+    }
+
+    document.getElementById("repositorios").innerHTML = Repository;
+  };
+
+  xhr2.onerror = function () {
+    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
+  };
+  xhr2.open("GET", "https://api.github.com/users/babi2707/repos");
+  xhr2.send();
+
+  //---------------------------------------------------------
 }
 
 function loadPesquisa() {
