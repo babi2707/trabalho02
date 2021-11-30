@@ -12,7 +12,7 @@ function loadProfile() {
     <img
       class="info-img"
       src="${data.avatar_url}"
-      alt="Card image cap"
+      alt="image cap"
     />
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
