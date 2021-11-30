@@ -84,12 +84,30 @@ nav form .form-control:hover {
 }
 
 #profile img {
-    max-width: 100%;
+    max-width: 80%;
+}
+
+.infos p:nth-child(2) {
+    margin-top: 20px !important;
 }
 
 /****************************************/
 
 
 /*************** Footer *****************/
+footer {
+    background-color: rgb(82, 37, 119);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: -100px;
+    height: 50px;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 15px;
+    color: thistle;
+}
 
 /****************************************/

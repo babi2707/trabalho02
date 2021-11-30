@@ -32,7 +32,7 @@ function loadProfile() {
     </div>
     </div>`;
 
-    document.getElementById("tela").innerHTML = newProfile;
+    document.getElementById("perfil").innerHTML = newProfile;
   };
 
   xhr.onerror = function () {
