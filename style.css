@@ -1,0 +1,78 @@
+/************* Body General *************/
+body {
+    background-color: rgb(215, 190, 235);
+}
+/****************************************/
+
+/***************** Menu *****************/
+nav {
+    background-color: rgb(82, 37, 119);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: thistle;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(136, 85, 177);
+    font-weight: 500;
+}
+
+.collapse li a {
+    text-decoration: none;
+    color: thistle;
+}
+
+.collapse li a:hover {
+    text-decoration: none;
+    color: rgb(136, 85, 177);
+}
+
+nav #botaoCollapse {
+    background-color: thistle;
+}
+
+nav #botaoCollapse:hover {
+    background-color: rgb(115, 60, 160);
+    border-style: solid;
+    border-color: rgb(49, 49, 49);
+}
+
+#botaoCollapse span i {
+    margin-top: 6px; 
+    color: rgb(82, 37, 119);
+}
+
+#botaoCollapse span i:hover {
+    margin-top: 6px;
+    color: thistle;
+}
+
+nav form .btn {
+    background-color: rgb(215, 190, 235);
+    border-style: solid;
+    border-color: rgb(78, 78, 78);
+}
+
+nav form .btn:hover {
+    background-color: rgb(115, 60, 160);
+    border-style: solid;
+    border-color: rgb(49, 49, 49);
+    color: white;
+}
+
+nav form .form-control:hover {
+    background-color: thistle;
+}
+
+/****************************************/
+
+/***************** Main *****************/
+
+/****************************************/
