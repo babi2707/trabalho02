@@ -17,9 +17,9 @@ function loadProfile() {
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
-      <h5 class="info-title">Profile: ${data.name}</h5>
-      <p>Username: ${data.login} </p>
-      <p class="info-text">Bio:
+      <h5 class="info-title"> <strong> Profile: </strong>  ${data.name}</h5>
+      <p><strong> Username: </strong> ${data.login} </p>
+      <p class="info-text"><strong> Bio: </strong> 
       ${data.bio}
       </p>
       <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
