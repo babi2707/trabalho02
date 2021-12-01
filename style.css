@@ -195,6 +195,12 @@ h5 strong {
         max-width: 70%;
         border-radius: 20px;
     }
+
+    footer p {
+        padding-top: 15px;
+        color: thistle;
+        font-size: small !important; 
+    }
 }
 
 
@@ -213,6 +219,12 @@ h5 strong {
         border-radius: 8px;
         margin-bottom: 20px;
     }
+
+    footer p {
+        padding-top: 15px;
+        color: thistle;
+        font-size: small !important; 
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -229,6 +241,12 @@ h5 strong {
         text-align: center;
         border-radius: 8px;
         margin-bottom: 20px;
+    }
+
+    footer p {
+        padding-top: 15px;
+        color: thistle;
+        font-size: small !important; 
     }
 }
 
@@ -247,6 +265,12 @@ h5 strong {
         border-radius: 8px;
         margin-bottom: 20px;
     }
+
+    footer p {
+        padding-top: 15px;
+        color: thistle;
+        font-size: small !important; 
+    }
 }
 
 
@@ -264,6 +288,7 @@ footer {
 footer p {
     padding-top: 15px;
     color: thistle;
+    font-size: medium;
 }
 
 /****************************************/
