@@ -64,8 +64,7 @@ function loadProfileInicial() {
     for (let i = 0; i < data2.length; i++) {
       let coloca = data2[i];
 
-      if (i % 2 == 0)
-      {
+      if (i % 2 == 0) {
         Repository += `
         <div class="row repos">
         <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -78,10 +77,7 @@ function loadProfileInicial() {
         >Link</a
       ></button>
         </div>`;
-      }
-
-      else
-      {
+      } else {
         Repository += `
         <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
@@ -95,7 +91,6 @@ function loadProfileInicial() {
         </div>
         </div>`;
       }
-      
     }
 
     Repository += `</div>`;
