@@ -77,6 +77,7 @@ nav form .form-control:hover {
 #profile {
     text-align: justify;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .infos {
@@ -95,16 +96,21 @@ nav form .form-control:hover {
     margin-top: 20px !important;
 }
 
+#reposit {
+    margin-top: 70px;
+}
+
 .repos h5 {
     margin-top: 50px;
 }
 
-.repos #r1, .repos #r2 {
+.repos .r1, .repos .r2 {
     margin-top: 10px;
     text-align: center;
     background-color: rgb(170, 149, 187);
     border-radius: 5px;
     padding-bottom: 20px;
+    padding-left: 5px;
 }
 
 .btn-gradient {
@@ -119,6 +125,10 @@ nav form .form-control:hover {
     background-color:rgb(129, 87, 167);
 }
 
+#profile h4 {
+    margin-bottom: 40px !important;
+}
+
 h4 {
     font-size: x-large;
     color:rgb(49, 30, 65);
@@ -126,6 +136,36 @@ h4 {
     background-color: rgb(149, 109, 182);
     text-align: center;
     border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    margin: 30px;
+}
+
+.botao button {
+    border-style: solid;
+    border-width: small;
+    border-color: rgb(88, 88, 88);
+}
+
+.botao a {
+    text-align: center;
+    text-decoration: none;
+    color:blanchedalmond;
+    font-size: small;
+}
+
+.botao .btn-gradient {
+    background-image: var(--bs-gradient);
+}
+
+.botao .bg- {
+    background-color:rgb(105, 78, 168);
+}
+
+.botao .bg-:hover {
+    background-color:rgb(144, 112, 172);
 }
 
 

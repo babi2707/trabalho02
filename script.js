@@ -5,13 +5,13 @@ function loadProfileInicial() {
   xhr.onload = function () {
     var data = JSON.parse(this.responseText);
 
-    let newProfile = `<div class="container">
+    let newProfile = `<div class="container" id="profile">
     <div class="row ms-auto">
     <div class="col-4">
     <h4>Perfil</h4>
     </div>
     </div>
-    <div class="row" id="profile">
+    <div class="row">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
     <img
       class="info-img"
@@ -54,7 +54,7 @@ function loadProfileInicial() {
   xhr2.onload = function () {
     var data2 = JSON.parse(this.responseText);
 
-    let Repository = `<div class="container">
+    let Repository = `<div class="container" id="reposit">
     <div class="row ms-auto">
     <div class="col-4">
     <h4>Repositórios</h4>
@@ -68,7 +68,7 @@ function loadProfileInicial() {
       if (i % 2 == 0) {
         Repository += `
         <div class="row repos">
-        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -82,7 +82,7 @@ function loadProfileInicial() {
         </div>`;
       } else {
         Repository += `
-        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -102,7 +102,7 @@ function loadProfileInicial() {
       if (i % 2 == 0) {
         Repository += `
         <div class="row repos">
-        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -121,7 +121,7 @@ function loadProfileInicial() {
         </div>`;
       } else {
         Repository += `
-        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -165,14 +165,14 @@ function loadPesquisa() {
   xhr.onload = function () {
     var dataP = JSON.parse(this.responseText);
 
-    let newProfile = `<div class="container">
+    let newProfile = `<div class="container" id="profile">
     <div class="container">
     <div class="row ms-auto">
     <div class="col-4">
     <h4>Perfil</h4>
     </div>
     </div>
-    <div class="row" id="profile">
+    <div class="row">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
     <img
       class="info-img"
@@ -187,7 +187,7 @@ function loadPesquisa() {
       <p class="info-text"><strong> Bio: </strong> 
       ${dataP.bio}
       </p>
-      <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${dataP.html_url}"
         >Github profile</a
@@ -215,7 +215,7 @@ function loadPesquisa() {
   xhr2.onload = function () {
     var data2 = JSON.parse(this.responseText);
 
-    let Repository = `<div class="container">
+    let Repository = `<div class="container" id="reposit">
     <div class="row ms-auto">
     <div class="col-4">
     <h4>Repositórios</h4>
@@ -229,7 +229,7 @@ function loadPesquisa() {
         if (i % 2 == 0) {
           Repository += `
         <div class="row repos">
-        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -243,7 +243,7 @@ function loadPesquisa() {
         </div>`;
         } else {
           Repository += `
-        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -263,7 +263,7 @@ function loadPesquisa() {
         if (i % 2 == 0) {
           Repository += `
         <div class="row repos">
-        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
@@ -282,7 +282,7 @@ function loadPesquisa() {
         </div>`;
         } else {
           Repository += `
-        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
