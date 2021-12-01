@@ -64,13 +64,16 @@ function loadProfileInicial() {
     for (let i = 0; i < data2.length; i++) {
       let coloca = data2[i];
 
+      if (coloca.has_pages == false) {
       if (i % 2 == 0) {
         Repository += `
         <div class="row repos">
         <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -82,7 +85,9 @@ function loadProfileInicial() {
         <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -92,6 +97,52 @@ function loadProfileInicial() {
         </div>`;
       }
     }
+    else
+    {
+      if (i % 2 == 0) {
+        Repository += `
+        <div class="row repos">
+        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="https://${coloca.owner.login}.github.io/${coloca.name}/"
+        >Link página</a
+      ></button>
+        </div>`;
+      } else {
+        Repository += `
+        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="https://${coloca.owner.login}.github.io/${coloca.name}/"
+        >Link página</a
+      ></button>
+        </div>
+        </div>`;
+      }
+    }
+    }
+  
 
     Repository += `</div>`;
 
@@ -108,30 +159,37 @@ function loadProfileInicial() {
 }
 
 function loadPesquisa() {
+  //------------------------ perfil ------------------------
   let xhr = new XMLHttpRequest();
 
   xhr.onload = function () {
-    var data = JSON.parse(this.responseText);
+    var dataP = JSON.parse(this.responseText);
 
     let newProfile = `<div class="container">
+    <div class="container">
+    <div class="row ms-auto">
+    <div class="col-4">
+    <h4>Perfil</h4>
+    </div>
+    </div>
     <div class="row" id="profile">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
     <img
       class="info-img"
-      src="${data.avatar_url}"
+      src="${dataP.avatar_url}"
       alt="image cap"
     />
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
-      <h5 class="info-title"> <strong> Profile: </strong>  ${data.name}</h5>
-      <p><strong> Username: </strong> ${data.login} </p>
+      <h5 class="info-title"> <strong> Profile: </strong>  ${dataP.name}</h5>
+      <p><strong> Username: </strong> ${dataP.login} </p>
       <p class="info-text"><strong> Bio: </strong> 
-      ${data.bio}
+      ${dataP.bio}
       </p>
       <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
         target="_blank"
-        href="${data.html_url}"
+        href="${dataP.html_url}"
         >Github profile</a
       ></button>
   </div>
@@ -147,12 +205,122 @@ function loadPesquisa() {
   };
   xhr.open("Get", `https://api.github.com/users/${inserir.value}`);
   xhr.send();
+
+  //--------------------------------------------------------
+
+  //---------------------- repositorio ----------------------
+
+  let xhr2 = new XMLHttpRequest();
+
+  xhr2.onload = function () {
+    var data2 = JSON.parse(this.responseText);
+
+    let Repository = `<div class="container">
+    <div class="row ms-auto">
+    <div class="col-4">
+    <h4>Repositórios</h4>
+    </div>
+    </div>`;
+
+    for (let i = 0; i < data2.length; i++) {
+      let coloca = data2[i];
+
+      if (coloca.has_pages == false) {
+        if (i % 2 == 0) {
+          Repository += `
+        <div class="row repos">
+        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+        </div>`;
+        } else {
+          Repository += `
+        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+        </div>
+        </div>`;
+        }
+      }
+      else
+      {
+        if (i % 2 == 0) {
+          Repository += `
+        <div class="row repos">
+        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="https://${coloca.owner.login}.github.io/${coloca.name}/"
+        >Link página</a
+      ></button>
+        </div>`;
+        } else {
+          Repository += `
+        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Descrição: ${coloca.description} </p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <p>Data criação: ${coloca.created_at} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="https://${coloca.owner.login}.github.io/${coloca.name}/"
+        >Link página</a
+      ></button>
+        </div>
+        </div>`;
+        }
+      }
+    }
+
+    Repository += `</div>`;
+
+    document.getElementById("repositorios").innerHTML = Repository;
+  };
+
+  xhr2.onerror = function () {
+    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
+  };
+  xhr2.open("GET", `https://api.github.com/users/${inserir.value}/repos`);
+  xhr2.send();
 }
 
 onload = () => {
   loadProfileInicial();
 
-  pesquisa.onclick = () => {
+  pesquisa.onsubmit = (evento) => {
+    evento.preventDefault();
     if (inserir.value.length > 0) {
       loadPesquisa();
       inserir.style.border = "thin gray solid";
