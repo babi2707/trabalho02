@@ -123,6 +123,8 @@ function repositoriosB() {
     for (let i = 0; i < data2.length; i++) {
       let coloca = data2[i];
 
+      let date = new Date(coloca.created_at);
+
       if (coloca.has_pages == false) {
         if (i % 2 == 0) {
           Repository += `
@@ -132,7 +134,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -146,7 +148,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -164,7 +166,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -183,7 +185,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -228,6 +230,8 @@ function repositoriosP() {
     for (let i = 0; i < data2.length; i++) {
       let coloca = data2[i];
 
+      let date = new Date(coloca.created_at);
+
       if (coloca.has_pages == false) {
         if (i % 2 == 0) {
           Repository += `
@@ -237,7 +241,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -251,7 +255,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -269,7 +273,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -288,7 +292,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${coloca.created_at} </p>
+        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
