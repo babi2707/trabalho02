@@ -91,6 +91,7 @@ nav form .form-control:hover {
 
 #profile img {
     max-width: 80%;
+    border-radius: 20px;
 }
 
 .infos p:nth-child(2) {
