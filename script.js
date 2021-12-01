@@ -317,6 +317,10 @@ function repositoriosP() {
   xhr2.send();
 }
 
+function pesqRepB (){
+  
+}
+
 onload = () => {
   loadProfileInicial();
 
