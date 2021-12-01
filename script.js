@@ -5,6 +5,18 @@ function loadProfileInicial() {
   xhr.onload = function () {
     var data = JSON.parse(this.responseText);
 
+    if (data.name == null){
+      data.name = 'sem nome definido';
+    }
+
+    if (data.login == null){
+      data.login = 'sem login definido';
+    }
+
+    if (data.bio == null){
+      data.bio = 'sem bio definida';
+    }
+
     let newProfile = `<div class="container" id="profile">
     <div class="row ms-auto">
     <div class="col-4">
@@ -59,6 +71,18 @@ function loadPesquisa() {
 
   xhr.onload = function () {
     var dataP = JSON.parse(this.responseText);
+
+    if (dataP.name == null){
+      dataP.name = 'sem nome definido';
+    }
+
+    if (dataP.login == null){
+      dataP.login = 'sem login definido';
+    }
+
+    if (dataP.bio == null){
+      dataP.bio = 'sem bio definida';
+    }
 
     let newProfile = `<div class="container" id="profile">
     <div class="container">
@@ -124,6 +148,14 @@ function repositoriosB() {
       let coloca = data2[i];
 
       let date = new Date(coloca.created_at);
+
+      if (coloca.language == null){
+        coloca.language = 'sem linguagem definida';
+      }
+
+      if (coloca.description == null){
+        coloca.description = 'sem descrição definida';
+      }
 
       if (coloca.has_pages == false) {
         if (i % 2 == 0) {
@@ -232,6 +264,14 @@ function repositoriosP() {
 
       let date = new Date(coloca.created_at);
 
+      if (coloca.language == null){
+        coloca.language = 'sem linguagem definida';
+      }
+
+      if (coloca.description == null){
+        coloca.description = 'sem descrição definida';
+      }
+
       if (coloca.has_pages == false) {
         if (i % 2 == 0) {
           Repository += `
@@ -319,10 +359,6 @@ function repositoriosP() {
   };
   xhr2.open("GET", `https://api.github.com/users/${inserir.value}/repos`);
   xhr2.send();
-}
-
-function pesqRepB (){
-  
 }
 
 onload = () => {
