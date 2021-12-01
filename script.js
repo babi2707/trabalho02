@@ -134,7 +134,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -148,7 +148,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -166,7 +166,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -185,7 +185,7 @@ function repositoriosB() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -241,7 +241,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -255,7 +255,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -273,7 +273,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -292,7 +292,7 @@ function repositoriosP() {
         <p>Linguagem: ${coloca.language}</p>
         <p>Descrição: ${coloca.description} </p>
         <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação: ${date.toLocaleString('pt-br')} </p>
+        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
