@@ -90,7 +90,7 @@ nav form .form-control:hover {
 }
 
 #profile img {
-    max-width: 80%;
+    width: 80%;
     border-radius: 20px;
 }
 
@@ -186,6 +186,64 @@ h4 {
 
 
 /****************************************/
+@media screen and (min-width: 600px) and (max-width: 769px) {
+    #profile img {
+        max-width: 70%;
+        border-radius: 20px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #profile img {
+        max-width: 100% !important;
+        border-radius: 20px;
+        margin-left: 50px;
+    }
+
+    h4 {
+        font-size: 40px;
+        color:rgb(49, 30, 65);
+        background-color: rgba(149, 109, 182, 0);
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #profile img {
+        width: 130% !important;
+        border-radius: 20px;
+        margin-left: 5px;
+    }
+
+    h4 {
+        font-size: 20px;
+        color:rgb(49, 30, 65);
+        background-color: rgba(149, 109, 182, 0);
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #profile img {
+        max-width: 700% !important;
+        border-radius: 20px;
+        margin-left: 105px;
+    }
+
+    h4 {
+        font-size: 20px;
+        color:rgb(49, 30, 65);
+        background-color: rgba(149, 109, 182, 0);
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+}
 
 
 /*************** Footer *****************/
