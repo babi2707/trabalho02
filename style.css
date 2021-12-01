@@ -83,6 +83,10 @@ nav form .form-control:hover {
     margin-top: 40px;
 }
 
+.infos #perfilBotao {
+    margin-bottom: 30px;
+}
+
 #profile img {
     max-width: 80%;
 }
@@ -90,6 +94,40 @@ nav form .form-control:hover {
 .infos p:nth-child(2) {
     margin-top: 20px !important;
 }
+
+.repos h5 {
+    margin-top: 50px;
+}
+
+.repos #r1, .repos #r2 {
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(170, 149, 187);
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.btn-gradient {
+    background-image: var(--bs-gradient);
+}
+
+.bg- {
+    background-color:rgb(100, 45, 145);
+}
+
+.bg-:hover {
+    background-color:rgb(129, 87, 167);
+}
+
+h4 {
+    font-size: x-large;
+    color:rgb(49, 30, 65);
+    background-size: contain;
+    background-color: rgb(149, 109, 182);
+    text-align: center;
+    border-radius: 8px;
+}
+
 
 /****************************************/
 

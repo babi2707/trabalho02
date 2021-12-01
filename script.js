@@ -6,6 +6,11 @@ function loadProfileInicial() {
     var data = JSON.parse(this.responseText);
 
     let newProfile = `<div class="container">
+    <div class="row ms-auto">
+    <div class="col-4">
+    <h4>Perfil</h4>
+    </div>
+    </div>
     <div class="row" id="profile">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
     <img
@@ -21,7 +26,7 @@ function loadProfileInicial() {
       <p class="info-text"><strong> Bio: </strong> 
       ${data.bio}
       </p>
-      <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${data.html_url}"
         >Github profile</a
@@ -49,25 +54,51 @@ function loadProfileInicial() {
   xhr2.onload = function () {
     var data2 = JSON.parse(this.responseText);
 
-    let Repository = ``;
+    let Repository = `<div class="container">
+    <div class="row ms-auto">
+    <div class="col-4">
+    <h4>Repositórios</h4>
+    </div>
+    </div>`;
 
     for (let i = 0; i < data2.length; i++) {
       let coloca = data2[i];
-      Repository += `<div class="container">
-        <div class="row">
-        <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
+
+      if (i % 2 == 0)
+      {
+        Repository += `
+        <div class="row repos">
+        <div id="r1" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5>Repositório: ${coloca.name}</h5>
         <p>Linguagem: ${coloca.language}</p>
-        <p>Visibilidade:${coloca.visibility} </p>
-        <button id="perfilBotao" class="btn btn-danger"><a style="text-decoration: none; color: white;"
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
-        href="${coloca.url}"
+        href="${coloca.html_url}"
+        >Link</a
+      ></button>
+        </div>`;
+      }
+
+      else
+      {
+        Repository += `
+        <div id="r2" class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5>Repositório: ${coloca.name}</h5>
+        <p>Linguagem: ${coloca.language}</p>
+        <p>Visibilidade: ${coloca.visibility} </p>
+        <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${coloca.html_url}"
         >Link</a
       ></button>
         </div>
-        </div>
         </div>`;
+      }
+      
     }
+
+    Repository += `</div>`;
 
     document.getElementById("repositorios").innerHTML = Repository;
   };
