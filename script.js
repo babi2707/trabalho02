@@ -162,11 +162,11 @@ function repositoriosB() {
           Repository += `
         <div class="row repos">
         <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -176,11 +176,11 @@ function repositoriosB() {
         } else {
           Repository += `
         <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -194,11 +194,11 @@ function repositoriosB() {
           Repository += `
         <div class="row repos">
         <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -213,11 +213,11 @@ function repositoriosB() {
         } else {
           Repository += `
         <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -277,11 +277,11 @@ function repositoriosP() {
           Repository += `
         <div class="row repos">
         <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -291,11 +291,11 @@ function repositoriosP() {
         } else {
           Repository += `
         <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -309,11 +309,11 @@ function repositoriosP() {
           Repository += `
         <div class="row repos">
         <div class="r1 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -328,11 +328,11 @@ function repositoriosP() {
         } else {
           Repository += `
         <div class="r2 col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <h5>Repositório: ${coloca.name}</h5>
-        <p>Linguagem: ${coloca.language}</p>
-        <p>Descrição: ${coloca.description} </p>
-        <p>Visibilidade: ${coloca.visibility} </p>
-        <p>Data criação (m/d/a): ${date.toLocaleString('en')} </p>
+        <h5><strong> Repositório: </strong> ${coloca.name}</h5>
+        <p><strong> Linguagem: </strong> ${coloca.language}</p>
+        <p><strong> Descrição: </strong> ${coloca.description} </p>
+        <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
