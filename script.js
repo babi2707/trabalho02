@@ -29,11 +29,11 @@ function loadProfileInicial() {
     </div>
     <div class="row">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-    <img
-      class="info-img"
-      src="${data.avatar_url}"
-      alt="image cap"
-    />
+    <a target="_blank" href="${data.html_url}" style="text-decoration: none;"><img
+    class="info-img"
+    src="${data.avatar_url}"
+    alt="image cap"
+  /></a>
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
@@ -100,11 +100,11 @@ function loadPesquisa() {
     </div>
     <div class="row">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-    <img
-      class="info-img"
-      src="${dataP.avatar_url}"
-      alt="image cap"
-    />
+    <a target="_blank" href="${dataP.html_url}" style="text-decoration: none;"><img
+    class="info-img"
+    src="${dataP.avatar_url}"
+    alt="image cap"
+  /></a>
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
