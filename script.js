@@ -42,17 +42,10 @@ function loadProfileInicial() {
       <p class="info-text"><strong> Bio: </strong> 
       ${data.bio}
       </p>
-      <div class="row">
-      <div class="col-2">
-      <img style="width: 30px; height: 30px; border-radius: 0px; margin-top:-5px; " class="follw" src="img/followers.png" />
-      </div>
-      <div class="col-7">
-      <p class="info-text"> <strong class="sEspaco"> Seguidores: </strong> 
+      <p class="info-text"> <strong> Seguidores: </strong> 
       ${data.followers} <strong class="espaco"> Seguindo: </strong>
       ${data.following}
       </p>
-      </div>
-      </div>
       <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${data.html_url}"
@@ -120,17 +113,10 @@ function loadPesquisa() {
     <p class="info-text"><strong> Bio: </strong> 
     ${dataP.bio}
     </p>
-    <div class="row">
-      <div class="col-2">
-      <img style="width: 30px; height: 30px; border-radius: 0px; margin-top:-5px; " class="follw" src="img/followers.png" />
-      </div>
-      <div class="col-7">
-      <p class="info-text"> <strong class="sEspaco"> Seguidores: </strong> 
-      ${dataP.followers} <strong class="espaco"> Seguindo: </strong>
-      ${dataP.following}
-      </p>
-      </div>
-      </div>
+    <p class="info-text"><strong> Seguidores: </strong> 
+    ${dataP.followers} <strong class="espaco"> Seguindo: </strong>
+    ${dataP.following}
+    </p>
     <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
       target="_blank"
       href="${dataP.html_url}"
