@@ -29,7 +29,7 @@ function loadProfileInicial() {
     </div>
     <div class="row">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-    <a target="_blank" href="${data.html_url}" style="text-decoration: none;"><img
+    <a target="_blank" href="${data.avatar_url}" style="text-decoration: none;"><img
     class="info-img"
     src="${data.avatar_url}"
     alt="image cap"
@@ -37,7 +37,7 @@ function loadProfileInicial() {
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
-      <h5 class="info-title"> <strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Profile name: </a> </strong>  ${data.name}</h5>
+      <h5 class="info-title"> <strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Profile name:</a> </strong>  ${data.name}</h5>
       <p><strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Username: </a> </strong> ${data.login} </p>
       <p class="info-text"><strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Bio: </a> </strong> 
       ${data.bio}
@@ -100,7 +100,7 @@ function loadPesquisa() {
     </div>
     <div class="row">
     <div class="col-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-    <a target="_blank" href="${dataP.html_url}" style="text-decoration: none;"><img
+    <a target="_blank" href="${dataP.avatar_url}" style="text-decoration: none;"><img
     class="info-img"
     src="${dataP.avatar_url}"
     alt="image cap"
