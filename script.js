@@ -5,16 +5,26 @@ function loadProfileInicial() {
   xhr.onload = function () {
     var data = JSON.parse(this.responseText);
 
-    if (data.name == null){
-      data.name = 'sem nome definido';
+    let segs = seguidores();
+
+    if (segs == null) {
+      segs = "nenhum seguidor";
     }
 
-    if (data.login == null){
-      data.login = 'sem login definido';
+    if (data.followers_url == null) {
+      data.followers_url = "nenhum seguidor";
     }
 
-    if (data.bio == null){
-      data.bio = 'sem bio definida';
+    if (data.name == null) {
+      data.name = "sem nome definido";
+    }
+
+    if (data.login == null) {
+      data.login = "sem login definido";
+    }
+
+    if (data.bio == null) {
+      data.bio = "sem bio definida";
     }
 
     let newProfile = `<div class="container" id="profile">
@@ -37,6 +47,17 @@ function loadProfileInicial() {
       <p><strong> Username: </strong> ${data.login} </p>
       <p class="info-text"><strong> Bio: </strong> 
       ${data.bio}
+      </p>
+      <p class="botao2">
+      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Lista seguidores
+      </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+      </div>
+      <p class="info-text"><strong> Seguidores: </strong> 
+      ${data.followers} <strong class="espaco"> Seguindo: </strong>
+      ${data.following}
       </p>
       <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
@@ -61,7 +82,7 @@ function loadProfileInicial() {
 
   //---------------------- repositorio ----------------------
   repositoriosB();
-  
+
   //---------------------------------------------------------
 }
 
@@ -72,16 +93,22 @@ function loadPesquisa() {
   xhr.onload = function () {
     var dataP = JSON.parse(this.responseText);
 
-    if (dataP.name == null){
-      dataP.name = 'sem nome definido';
+    let segs = seguidoresP();
+
+    if (segs == null) {
+      segs = "nenhum seguidor";
     }
 
-    if (dataP.login == null){
-      dataP.login = 'sem login definido';
+    if (dataP.name == null) {
+      dataP.name = "sem nome definido";
     }
 
-    if (dataP.bio == null){
-      dataP.bio = 'sem bio definida';
+    if (dataP.login == null) {
+      dataP.login = "sem login definido";
+    }
+
+    if (dataP.bio == null) {
+      dataP.bio = "sem bio definida";
     }
 
     let newProfile = `<div class="container" id="profile">
@@ -101,16 +128,30 @@ function loadPesquisa() {
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
-      <h5 class="info-title"> <strong> Profile: </strong>  ${dataP.name}</h5>
-      <p><strong> Username: </strong> ${dataP.login} </p>
-      <p class="info-text"><strong> Bio: </strong> 
-      ${dataP.bio}
-      </p>
-      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
-        target="_blank"
-        href="${dataP.html_url}"
-        >Github profile</a
-      ></button>
+    <h5 class="info-title"> <strong> Profile: </strong>  ${dataP.name}</h5>
+    <p><strong> Username: </strong> ${dataP.login} </p>
+    <p class="info-text"><strong> Bio: </strong> 
+    ${dataP.bio}
+    </p>
+    <p class="botao2">
+    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Lista seguidores
+    </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+    <div id="drop" class="card card-body">
+    ${segs}
+    </div>
+    </div>
+    <p class="info-text"><strong> Seguidores: </strong> 
+    ${dataP.followers} <strong class="espaco"> Seguindo: </strong>
+    ${dataP.following}
+    </p>
+    <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+      target="_blank"
+      href="${dataP.html_url}"
+      >Github profile</a
+    ></button>
   </div>
     </div>
     </div>
@@ -149,12 +190,12 @@ function repositoriosB() {
 
       let date = new Date(coloca.created_at);
 
-      if (coloca.language == null){
-        coloca.language = 'sem linguagem definida';
+      if (coloca.language == null) {
+        coloca.language = "sem linguagem definida";
       }
 
-      if (coloca.description == null){
-        coloca.description = 'sem descrição definida';
+      if (coloca.description == null) {
+        coloca.description = "sem descrição definida";
       }
 
       if (coloca.has_pages == false) {
@@ -166,7 +207,9 @@ function repositoriosB() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -180,7 +223,9 @@ function repositoriosB() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -198,7 +243,9 @@ function repositoriosB() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -217,7 +264,9 @@ function repositoriosB() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -264,12 +313,12 @@ function repositoriosP() {
 
       let date = new Date(coloca.created_at);
 
-      if (coloca.language == null){
-        coloca.language = 'sem linguagem definida';
+      if (coloca.language == null) {
+        coloca.language = "sem linguagem definida";
       }
 
-      if (coloca.description == null){
-        coloca.description = 'sem descrição definida';
+      if (coloca.description == null) {
+        coloca.description = "sem descrição definida";
       }
 
       if (coloca.has_pages == false) {
@@ -281,7 +330,9 @@ function repositoriosP() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -295,7 +346,9 @@ function repositoriosP() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -313,7 +366,9 @@ function repositoriosP() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -332,7 +387,9 @@ function repositoriosP() {
         <p><strong> Linguagem: </strong> ${coloca.language}</p>
         <p><strong> Descrição: </strong> ${coloca.description} </p>
         <p><strong> Visibilidade: </strong> ${coloca.visibility} </p>
-        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString('en')} </p>
+        <p><strong> Data criação (m/d/a): </strong> ${date.toLocaleString(
+          "en"
+        )} </p>
         <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${coloca.html_url}"
@@ -359,6 +416,52 @@ function repositoriosP() {
   };
   xhr2.open("GET", `https://api.github.com/users/${inserir.value}/repos`);
   xhr2.send();
+}
+
+function seguidores() {
+  let xhr3 = new XMLHttpRequest();
+
+  xhr3.onload = () => {
+    var insere = ``;
+
+    document.getElementById("drop").innerHTML = insere;
+  };
+
+  xhr3.onerror = () => {
+    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
+  };
+
+  xhr3.open("GET", "https://api.github.com/users/babi2707/followers");
+
+  xhr3.send();
+}
+
+function seguidoresP() {
+  let xhr3 = new XMLHttpRequest();
+
+  xhr3.onload = () => {
+    var seg = JSON.parse(this.responseText);
+
+    var insere = ``;
+
+    if (seg.length > 0) {
+      for (let i = 0; i < seg.length; i++) {
+        var inicializa = seg[i];
+
+        insere += `Login: ${inicializa.JSON.stringfy(login)}`;
+      }
+    }
+
+    document.getElementById("drop").innerHTML = insere;
+  };
+
+  xhr3.onerror = () => {
+    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
+  };
+
+  xhr3.open("GET", `https://api.github.com/users/${inserir.value}/followers`);
+
+  xhr3.send();
 }
 
 onload = () => {

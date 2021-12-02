@@ -184,8 +184,25 @@ h4 {
     background-color:rgb(144, 112, 172);
 }
 
+.botao2 .btn {
+    border-color: rgb(160, 89, 226);
+}
+
+.botao2 .btn:hover {
+    border-color: rgb(160, 89, 226);
+    background-color: rgb(160, 89, 226);
+}
+
+#drop {
+    background-color: rgb(199, 172, 221);
+}
+
 h5 strong {
     font-weight: 800;
+}
+
+.espaco {
+    margin-left: 40px;
 }
 
 
