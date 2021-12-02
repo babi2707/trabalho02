@@ -212,6 +212,14 @@ h4 {
     background-color:rgb(144, 112, 172);
 }
 
+#pesqR input {
+    background-color:rgb(232, 225, 238);
+}
+
+#pesqR input:hover {
+    background-color:rgb(194, 168, 216);
+}
+
 .botao2 .btn {
     border-color: rgb(160, 89, 226);
 }

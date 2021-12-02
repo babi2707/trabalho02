@@ -180,9 +180,20 @@ function repositoriosB() {
     var data2 = JSON.parse(this.responseText);
 
     let Repository = `<div class="container" id="reposit">
-    <div class="row ms-auto">
+    <div class="row ms-auto justify-content-between">
     <div class="col-4">
     <h4>Repositórios</h4>
+    </div>
+    <div class="col-6">
+    <form id="pesqR" method="post" class="d-flex">
+            <input id="pesquisaR"
+              class="form-control me-2"
+              type="search"
+              placeholder="Repositórios..."
+              aria-label="Search"
+            />
+            <button style="text-align: center;" class="btn bg- bg-gradient" type="submit"><img style="width: 20px; height: 20px" src="img/lupa.png" /></button>
+          </form>
     </div>
     </div>`;
 
@@ -303,9 +314,20 @@ function repositoriosP() {
     var data2 = JSON.parse(this.responseText);
 
     let Repository = `<div class="container" id="reposit">
-    <div class="row ms-auto">
+    <div class="row ms-auto justify-content-between">
     <div class="col-4">
     <h4>Repositórios</h4>
+    </div>
+    <div class="col-6">
+    <form id="pesqR" method="post" class="d-flex">
+            <input id="pesquisaR"
+              class="form-control me-2"
+              type="search"
+              placeholder="Repositórios..."
+              aria-label="Search"
+            />
+            <button style="text-align: center;" class="btn bg- bg-gradient" type="submit"><img style="width: 20px; height: 20px" src="img/lupa.png" /></button>
+          </form>
     </div>
     </div>`;
 
