@@ -428,11 +428,15 @@ function seguidores() {
     {
       for (let i = 0; i < segs.length; i++) {
         let s = segs[i];
-        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i}: <strong> ${s.login}  </strong></a> <br>`;
+        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i}: <strong> ${s.login}  </strong></a>`;
+        if (i < segs.length - 1)
+        {
+          insere += `<br`;
+        }
       }
     }
     else {
-      insere += `Nenhum seguidor`
+      insere += `<p>Nenhum seguidor</p>`;
     }
 
     insere += `</div>
@@ -466,11 +470,15 @@ function seguidoresP (){
     {
       for (let i = 0; i < segs.length; i++) {
         let s = segs[i];
-        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i}: <strong> ${s.login}  </strong></a> <br>`;
+        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i}: <strong> ${s.login}  </strong></a>`;
+        if (i < segs.length - 1)
+        {
+          insere += `<br`;
+        }
       }
     }
     else {
-      insere += `Nenhum seguidor`
+      insere += `<p>Nenhum seguidor</p>`
     }
 
     insere += `</div>

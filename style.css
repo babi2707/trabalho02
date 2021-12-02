@@ -99,8 +99,17 @@ nav form .form-control:hover {
     background-color:#d4a8f3;
 }
 
+#foll a {
+    font-size: small !important;
+}
+
+#foll p {
+    font-size: small !important;
+}
+
 #foll a:hover {
     color: rgb(112, 112, 112) !important;
+    font-size: small !important;
 }
 
 #profile img {
