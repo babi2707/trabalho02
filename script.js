@@ -5,12 +5,6 @@ function loadProfileInicial() {
   xhr.onload = function () {
     var data = JSON.parse(this.responseText);
 
-    let segs = seguidores();
-
-    if (segs == null) {
-      segs = "nenhum seguidor";
-    }
-
     if (data.followers_url == null) {
       data.followers_url = "nenhum seguidor";
     }
@@ -48,17 +42,17 @@ function loadProfileInicial() {
       <p class="info-text"><strong> Bio: </strong> 
       ${data.bio}
       </p>
-      <p class="botao2">
-      <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Lista seguidores
-      </button>
-      </p>
-      <div class="collapse" id="collapseExample">
+      <div class="row">
+      <div class="col-2">
+      <img style="width: 30px; height: 30px; border-radius: 0px; margin-top:-5px; " class="follw" src="img/followers.png" />
       </div>
-      <p class="info-text"><strong> Seguidores: </strong> 
+      <div class="col-7">
+      <p class="info-text"> <strong class="sEspaco"> Seguidores: </strong> 
       ${data.followers} <strong class="espaco"> Seguindo: </strong>
       ${data.following}
       </p>
+      </div>
+      </div>
       <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
         target="_blank"
         href="${data.html_url}"
@@ -82,7 +76,6 @@ function loadProfileInicial() {
 
   //---------------------- repositorio ----------------------
   repositoriosB();
-
   //---------------------------------------------------------
 }
 
@@ -92,12 +85,6 @@ function loadPesquisa() {
 
   xhr.onload = function () {
     var dataP = JSON.parse(this.responseText);
-
-    let segs = seguidoresP();
-
-    if (segs == null) {
-      segs = "nenhum seguidor";
-    }
 
     if (dataP.name == null) {
       dataP.name = "sem nome definido";
@@ -133,20 +120,17 @@ function loadPesquisa() {
     <p class="info-text"><strong> Bio: </strong> 
     ${dataP.bio}
     </p>
-    <p class="botao2">
-    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Lista seguidores
-    </button>
-    </p>
-    <div class="collapse" id="collapseExample">
-    <div id="drop" class="card card-body">
-    ${segs}
-    </div>
-    </div>
-    <p class="info-text"><strong> Seguidores: </strong> 
-    ${dataP.followers} <strong class="espaco"> Seguindo: </strong>
-    ${dataP.following}
-    </p>
+    <div class="row">
+      <div class="col-2">
+      <img style="width: 30px; height: 30px; border-radius: 0px; margin-top:-5px; " class="follw" src="img/followers.png" />
+      </div>
+      <div class="col-7">
+      <p class="info-text"> <strong class="sEspaco"> Seguidores: </strong> 
+      ${dataP.followers} <strong class="espaco"> Seguindo: </strong>
+      ${dataP.following}
+      </p>
+      </div>
+      </div>
     <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
       target="_blank"
       href="${dataP.html_url}"
@@ -416,52 +400,6 @@ function repositoriosP() {
   };
   xhr2.open("GET", `https://api.github.com/users/${inserir.value}/repos`);
   xhr2.send();
-}
-
-function seguidores() {
-  let xhr3 = new XMLHttpRequest();
-
-  xhr3.onload = () => {
-    var insere = ``;
-
-    document.getElementById("drop").innerHTML = insere;
-  };
-
-  xhr3.onerror = () => {
-    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
-  };
-
-  xhr3.open("GET", "https://api.github.com/users/babi2707/followers");
-
-  xhr3.send();
-}
-
-function seguidoresP() {
-  let xhr3 = new XMLHttpRequest();
-
-  xhr3.onload = () => {
-    var seg = JSON.parse(this.responseText);
-
-    var insere = ``;
-
-    if (seg.length > 0) {
-      for (let i = 0; i < seg.length; i++) {
-        var inicializa = seg[i];
-
-        insere += `Login: ${inicializa.JSON.stringfy(login)}`;
-      }
-    }
-
-    document.getElementById("drop").innerHTML = insere;
-  };
-
-  xhr3.onerror = () => {
-    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
-  };
-
-  xhr3.open("GET", `https://api.github.com/users/${inserir.value}/followers`);
-
-  xhr3.send();
 }
 
 onload = () => {

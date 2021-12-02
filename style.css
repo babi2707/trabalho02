@@ -205,6 +205,10 @@ h5 strong {
     margin-left: 40px;
 }
 
+.sEspaco {
+    margin-left: -40px;
+}
+
 
 /****************************************/
 @media screen and (min-width: 600px) and (max-width: 769px) {
