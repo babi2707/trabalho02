@@ -62,6 +62,9 @@ function loadProfileInicial() {
     <div class="col-6 col-xl-4 col-lg-4 col-md-3 col-sm-6 col-xs-6">
     <div id="followers"></div>
     </div>
+    <div class="col-6 col-xl-4 col-lg-4 col-md-3 col-sm-6 col-xs-6">
+    <div id="following"></div>
+    </div>
     </div>
 
     </div>
@@ -80,6 +83,7 @@ function loadProfileInicial() {
 
   //---------------------- repositorio ----------------------
   seguidores();
+  seguindoB();
   repositoriosB();
   //---------------------------------------------------------
 }
@@ -144,6 +148,9 @@ function loadPesquisa() {
     <div class="col-6 col-xl-4 col-lg-4 col-md-3 col-sm-6 col-xs-6">
     <div id="followers"></div>
     </div>
+    <div class="col-6 col-xl-4 col-lg-4 col-md-3 col-sm-6 col-xs-6">
+    <div id="following"></div>
+    </div>
     </div>
 
     </div>
@@ -162,6 +169,7 @@ function loadPesquisa() {
 
   //---------------------- repositorio ----------------------
   seguidoresP ();
+  seguindoP();
   repositoriosP();
 }
 
@@ -428,7 +436,7 @@ function seguidores() {
     {
       for (let i = 0; i < segs.length; i++) {
         let s = segs[i];
-        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i}: <strong> ${s.login}  </strong></a>`;
+        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
         if (i < segs.length - 1)
         {
           insere += `<br`;
@@ -470,7 +478,7 @@ function seguidoresP (){
     {
       for (let i = 0; i < segs.length; i++) {
         let s = segs[i];
-        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i}: <strong> ${s.login}  </strong></a>`;
+        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
         if (i < segs.length - 1)
         {
           insere += `<br`;
@@ -492,6 +500,92 @@ function seguidoresP (){
   };
 
   xhr3.open("GET", `https://api.github.com/users/${inserir.value}/followers`);
+  xhr3.send();
+}
+
+function seguindoB()
+{
+  let xhr3 = new XMLHttpRequest();
+  xhr3.onload = function () {
+    var segs = JSON.parse(this.responseText);
+
+    let insere = `<p class="botao2">
+    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+      Lista seguindo
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample2">
+    <div id="foll" class="card card-body">`;
+
+    if (segs.length > 0)
+    {
+      for (let i = 0; i < segs.length; i++) {
+        let s = segs[i];
+        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
+        if (i < segs.length - 1)
+        {
+          insere += `<br`;
+        }
+      }
+    }
+    else {
+      insere += `<p>Nenhum seguidor</p>`
+    }
+
+    insere += `</div>
+    </div>`;
+
+    document.getElementById("following").innerHTML = insere;
+  };
+
+  xhr3.onerror = function () {
+    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
+  };
+
+  xhr3.open("GET", `https://api.github.com/users/babi2707/following`);
+  xhr3.send();
+}
+
+function seguindoP()
+{
+  let xhr3 = new XMLHttpRequest();
+  xhr3.onload = function () {
+    var segs = JSON.parse(this.responseText);
+
+    let insere = `<p class="botao2">
+    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+      Lista seguindo
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample2">
+    <div id="foll" class="card card-body">`;
+
+    if (segs.length > 0)
+    {
+      for (let i = 0; i < segs.length; i++) {
+        let s = segs[i];
+        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
+        if (i < segs.length - 1)
+        {
+          insere += `<br`;
+        }
+      }
+    }
+    else {
+      insere += `<p>Nenhum seguidor</p>`
+    }
+
+    insere += `</div>
+    </div>`;
+
+    document.getElementById("following").innerHTML = insere;
+  };
+
+  xhr3.onerror = function () {
+    alert(`Erro na requisição. \nCódigo: ${this.status} - ${this.statusText}`);
+  };
+
+  xhr3.open("GET", `https://api.github.com/users/${inserir.value}/following`);
   xhr3.send();
 }
 
