@@ -37,13 +37,13 @@ function loadProfileInicial() {
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
-      <h5 class="info-title"> <strong> Profile: </strong>  ${data.name}</h5>
-      <p><strong> Username: </strong> ${data.login} </p>
-      <p class="info-text"><strong> Bio: </strong> 
+      <h5 class="info-title"> <strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Profile name: </a> </strong>  ${data.name}</h5>
+      <p><strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Username: </a> </strong> ${data.login} </p>
+      <p class="info-text"><strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Bio: </a> </strong> 
       ${data.bio}
       </p>
-      <p class="info-text"> <strong> Seguidores: </strong> 
-      ${data.followers} <strong class="espaco"> Seguindo: </strong>
+      <p class="info-text"> <strong><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Seguidores: </a> </strong> 
+      ${data.followers} <strong class="espaco"><a target="_blank" href="${data.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Seguindo: </a> </strong>
       ${data.following}
       </p>
       <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
@@ -108,20 +108,20 @@ function loadPesquisa() {
     </div>
     <div class="col-12 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
     <div class="infos">
-    <h5 class="info-title"> <strong> Profile: </strong>  ${dataP.name}</h5>
-    <p><strong> Username: </strong> ${dataP.login} </p>
-    <p class="info-text"><strong> Bio: </strong> 
-    ${dataP.bio}
-    </p>
-    <p class="info-text"><strong> Seguidores: </strong> 
-    ${dataP.followers} <strong class="espaco"> Seguindo: </strong>
-    ${dataP.following}
-    </p>
-    <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
-      target="_blank"
-      href="${dataP.html_url}"
-      >Github profile</a
-    ></button>
+      <h5 class="info-title"> <strong><a target="_blank" href="${dataP.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Profile name: </a> </strong>  ${dataP.name}</h5>
+      <p class="info-text"><strong><a target="_blank" href="${dataP.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Username: </a> </strong> ${dataP.login} </p>
+      <p class="info-text"><strong><a target="_blank" href="${dataP.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Bio: </a> </strong> 
+      ${dataP.bio}
+      </p>
+      <p class="info-text"> <strong><a target="_blank" href="${dataP.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Seguidores: </a> </strong> 
+      ${dataP.followers} <strong class="espaco"><a target="_blank" href="${dataP.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> Seguindo: </a> </strong>
+      ${dataP.following}
+      </p>
+      <button id="perfilBotao" class="btn bg- bg-gradient"><a style="text-decoration: none; color: white;"
+        target="_blank"
+        href="${dataP.html_url}"
+        >Github profile</a
+      ></button>
   </div>
     </div>
     </div>
