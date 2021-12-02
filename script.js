@@ -461,7 +461,7 @@ function seguidores() {
         insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
         if (i < segs.length - 1)
         {
-          insere += `<br`;
+          insere += `<br>`;
         }
       }
     }
@@ -500,10 +500,10 @@ function seguidoresP (){
     {
       for (let i = 0; i < segs.length; i++) {
         let s = segs[i];
-        insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
-        if (i < segs.length - 1)
+        insere += `<a target="_blank" href="${s.html_url}"> ${i+1}: <strong> ${s.login}  </strong></a>`;
+        if (i != (segs.length - 1))
         {
-          insere += `<br`;
+          insere += `<br>`;
         }
       }
     }
@@ -546,7 +546,7 @@ function seguindoB()
         insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
         if (i < segs.length - 1)
         {
-          insere += `<br`;
+          insere += `<br>`;
         }
       }
     }
@@ -589,7 +589,7 @@ function seguindoP()
         insere += `<a target="_blank" href="${s.html_url}" style="text-decoration: none; color: rgb(39, 39, 39);"> ${i+1}: <strong> ${s.login}  </strong></a>`;
         if (i < segs.length - 1)
         {
-          insere += `<br`;
+          insere += `<br>`;
         }
       }
     }

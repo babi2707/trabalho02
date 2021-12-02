@@ -101,6 +101,8 @@ nav form .form-control:hover {
 
 #foll a {
     font-size: small !important;
+    text-decoration: none; 
+    color: rgb(39, 39, 39);
 }
 
 #foll p {
