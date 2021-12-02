@@ -498,6 +498,10 @@ function seguidoresP (){
 onload = () => {
   loadProfileInicial();
 
+  volt.onclick = () => {
+    loadProfileInicial();
+  };
+
   pesquisa.onsubmit = (evento) => {
     evento.preventDefault();
     if (inserir.value.length > 0) {
