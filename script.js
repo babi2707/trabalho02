@@ -90,7 +90,7 @@ function loadPesquisa() {
     if (dataP.bio == null) {
       dataP.bio = "sem bio definida";
     }
-
+    
     let newProfile = `<div class="container" id="profile">
     <div class="container">
     <div class="row ms-auto">
